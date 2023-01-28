@@ -1,0 +1,27 @@
+<input type="checkbox" id="my-modal-3" class="modal-toggle" />
+<div class="modal">
+  <div class="modal-box relative" id="add-new-modal-box">
+    <label title="esc" for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2"
+      >✕</label
+    >
+    <div class="flex flex-col mt-7" id="add-new-modal">
+      <div class="flex flex-col justify-center w-full gap-1">
+        <input tabindex="0" class="h-8 pl-3" placeholder="Service" type="text" name="" id="service" />
+        <div class="divider"></div>
+        <input tabindex="1" class="h-8 pl-3" placeholder="Email" type="text" name="" id="email" />
+        <input tabindex="2" class="h-8 pl-3" placeholder="Password" type="password" name="" id="password" />
+        <div class="divider"></div>
+        <input tabindex="3" class="h-8 pl-3" placeholder="Question" type="text" name="" id="question" />
+        <input tabindex="4" class="h-8 pl-3" placeholder="Answer" type="text" name="" id="answer" />
+        <button tabindex="5" id="add-question" class="btn btn-ghost btn-sm btn-outline btn-secondary">Add</button>
+      </div>
+
+      <div class="flex flex-row justify-end w-full gap-1 mt-14">
+        <label class="btn btn-error btn-ghost btn-sm" for="my-modal-3"
+          >Cancel</label
+        >
+        <label class="btn btn-success btn-sm" for="my-modal-3">Done</label>
+      </div>
+    </div>
+  </div>
+</div>

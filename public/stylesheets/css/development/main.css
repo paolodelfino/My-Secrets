@@ -1,0 +1,129 @@
+/* Do not touch this three lines */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  @apply outline-0 ring-2 ring-base-300;
+}
+
+.btn-action {
+  @apply rounded-full bg-base-300 hover:bg-base-200 hover:shadow-md p-3 active:ring-2 active:ring-base-300 hover:cursor-pointer;
+}
+
+.btn-filter {
+  @apply rounded-full bg-base-300 hover:bg-base-200 hover:shadow-md px-3 py-1 active:ring-2 active:ring-base-300;
+}
+
+[display] {
+  display: block !important;
+}
+
+div[dropdown] {
+  @apply relative;
+}
+
+div[dropdown] > div {
+  @apply rounded-lg bg-base-300 shadow-lg p-3 hidden absolute z-50;
+}
+
+div[dropdown][top] > div {
+  @apply bottom-full left-1/2 transform -translate-x-1/2 mb-1;
+}
+
+div[dropdown][left] > div {
+  @apply right-full top-1/2 transform -translate-y-1/2 mr-1;
+}
+
+div[dropdown][right] > div {
+  @apply left-full top-1/2 transform -translate-y-1/2 ml-1;
+}
+
+div[dropdown][bottom] > div {
+  @apply top-full left-1/2 transform -translate-x-1/2 mt-2;
+}
+
+div[accordion] > div:first-child {
+  @apply rounded-lg bg-base-200 shadow-lg p-3 cursor-pointer select-none mb-1 active:ring-2 active:ring-base-100 active:ring-opacity-50;
+}
+
+div[accordion] > div:first-child:not([focus]) {
+  @apply active:ring-base-100;
+}
+
+div[accordion] > div:first-child[focus] {
+  @apply bg-base-100;
+}
+
+div[accordion] > div:last-child {
+  @apply hidden p-3 rounded-lg bg-base-200 shadow-lg ring-2 ring-base-100;
+}
+
+.secret-btn {
+  @apply bg-base-300 py-1 px-2 hover:shadow-lg hover:ring-2 hover:ring-base-100 rounded-lg active:bg-base-100;
+}
+
+div[group] {
+  @apply flex flex-row shadow-lg rounded-lg ring-2 ring-base-200;
+}
+
+div[group] *:first-child {
+  @apply rounded-r-none;
+}
+
+div[group] *:last-child {
+  @apply rounded-l-none;
+}
+
+div[group] *:not(:first-child):not(:last-child) {
+  @apply rounded-l-none rounded-r-none;
+}
+
+div.credential {
+  @apply flex flex-col justify-center bg-base-300 p-4 hover:bg-base-200 hover:shadow-md hover:shadow-base-200 active:ring-2 active:ring-base-200 hover:cursor-pointer select-none;
+}
+
+div.credential > div {
+  @apply flex flex-row justify-end w-full;
+}
+
+div.credential > div > span {
+  @apply text-primary text-xs mr-auto max-w-fit flex items-center;
+}
+
+div.credential > div > div {
+  @apply badge badge-primary max-w-fit;
+}
+
+div.credential div:nth-child(2) {
+  @apply flex flex-row justify-center w-full;
+}
+
+div.credential div:nth-child(2) > span {
+  @apply text-primary text-center text-lg font-bold mt-4;
+}
+
+div.credential div:nth-child(3) {
+  @apply flex flex-col w-full justify-start mt-2;
+}
+
+div.credential div:nth-child(3) > span {
+  @apply text-secondary text-base;
+}
+
+#questions-container div {
+  @apply flex flex-col w-full bg-base-100 mb-3 px-3 py-1 relative;
+}
+
+#questions-container div > button {
+  @apply absolute top-1 right-2 btn btn-square mask mask-squircle btn-ghost btn-xs;
+}
+
+#questions-container div > span {
+  @apply text-lg;
+}
+
+#questions-container div > span:nth-child(2) {
+  @apply text-base-content font-bold;
+}
