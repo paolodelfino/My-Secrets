@@ -265,7 +265,9 @@ $("#add-new").click(function () {
   store.set("temporaryQuestions", undefined);
 
   setTimeout(function () {
-    $("#service").focus();
+    if ($(window).width() >= 768) {
+      $("#service").focus();
+    }
   }, 500);
 });
 
